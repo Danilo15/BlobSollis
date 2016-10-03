@@ -135,7 +135,6 @@
     <Compile Include="Filters\AjaxCustomAuthAttributeLogin.cs" />
     <Compile Include="Filters\CustomAuthAttributeLogin.cs" />
     <Compile Include="Filters\DecimalModelBinder.cs" />
-    <Compile Include="Res.Designer.cs" />
     <Compile Include="Utilidades\CookieUtil.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />
     <Compile Include="Utilidades\WebConfigSettings.cs" />
@@ -552,9 +551,6 @@
     <Folder Include="Areas\Adm\Views\Posts\" />
     <Folder Include="HtmlHelpers\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Res.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlogSollisNegocio\BlogSollisNegocio.csproj">
