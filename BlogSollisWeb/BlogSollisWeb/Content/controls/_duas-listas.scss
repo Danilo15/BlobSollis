@@ -1,0 +1,63 @@
+.duas-listas {
+    position: relative;
+
+    .grid-control tbody {
+        tr[data-id] {
+            cursor: pointer;
+        }
+    }
+
+    .grid-control tfoot {
+        th {
+            height: 30px;
+        }
+    }
+
+    .grid-ph {
+        padding-right:0;
+        padding-left: 0;
+    }
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .col-xs-6 {
+        width: 44% !important;
+    }
+
+    .col-xs-1 {
+        width: auto;
+    }
+
+    .duas-lista-botoes {
+        margin-top: 143px;
+        text-align: center;
+        width: 100px;
+
+        .btn-remover {
+            margin-bottom: 20px;
+        }
+    }
+
+    .busca-divisor {
+        width: 100px;
+        float: left;
+        display: block;
+        height: 50px;
+    }
+
+    .criterio-busca {
+        float: left;
+    }
+
+    .complemento {
+        float: left;
+        margin-left: 20px;
+    }
+
+    .busca-ph {
+        width: 44%;
+    }
+}

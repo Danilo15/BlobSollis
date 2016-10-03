@@ -1,0 +1,44 @@
+/*#region RADIO BUTTON LIST DEFAULT (VERTICAL)  */
+.radio-button-list-vertical {
+    label {
+        display: table;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        input {
+            cursor: pointer;
+            margin-top: -4px;
+        }
+
+        span {
+            margin-left: 3px;
+            cursor: pointer;
+        }
+    }
+}
+/*#endregion*/
+
+/*#region RADIO BUTTON LIST HORIZONTAl */
+.radio-button-list-horizontal {
+    height: 30px;
+    display: table;
+    cursor: pointer;
+
+    label {
+        float: left;
+
+        input {
+            float: left;
+            cursor: pointer;
+            margin-top: 3px;
+        }
+
+        span {
+            float: left;
+            margin-left: 3px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+    }
+}
+/*#endregion*/

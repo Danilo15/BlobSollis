@@ -1,0 +1,23 @@
+.home {
+    .post-ph {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-top: 3%;
+    }
+
+    .post {
+        line-height: 25px;
+        padding-bottom:30px;
+        border-bottom:1px solid #ccc;
+        margin-bottom:30px;
+    }
+
+    .post:last-child{
+        border-bottom:none;
+    }
+
+    .nao-ha-posts {
+        text-align: center;
+        margin-top: 20%;
+    }
+}

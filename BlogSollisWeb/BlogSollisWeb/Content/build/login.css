@@ -1,0 +1,11 @@
+.login fieldset {
+  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 160px; }
+.login label.error {
+  display: none !important; }
+.login .password, .login .btn-entrar {
+  margin-top: 2rem; }
+.login ul.navbar-nav, .login p.navbar-text {
+  display: none !important; }

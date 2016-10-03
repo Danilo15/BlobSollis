@@ -1,0 +1,9 @@
+.post h1 {
+  text-decoration: none; }
+.post .post-ph {
+  max-width: 850px;
+  margin: 0 auto; }
+  .post .post-ph p {
+    line-height: 32px;
+    font-family: arial;
+    font-size: 17px; }

@@ -1,0 +1,73 @@
+.consulta-cnpj {
+    .consulta-cnpj-content {
+        position:relative;
+
+        label, input, img {
+            margin-left: 10px;
+        }
+
+        table {
+            width: 42%;
+
+            a {
+                display: none !important;
+            }
+        }
+    }
+
+    .cnpj {
+        width: 100px;
+    }
+
+    #txtTexto_captcha_serpro_gov_br {
+        width: 100px;
+    }
+
+    .cnpj-table {
+        margin-top: 20px;
+    }
+
+    .cnpj-table-linha {
+        position: absolute;
+        left: 249px;
+        top: 0;
+    }
+
+    label.error {
+        margin-right: 5px;
+    }
+
+    label.error[for=cnpj] {
+        left: 52px;
+        top: 44px;
+        position:absolute;
+    }
+
+    label.error[for=txtTexto_captcha_serpro_gov_br] {
+        left: 56%;
+        top: 44px;
+        position:absolute;
+    }
+
+    img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .btn-enviar {
+        margin-top: 10px;
+    }
+
+    .consulta-cnpj-result {
+        margin-top: 20px;
+        line-height: 15px;
+
+        * {
+            font-size: 12px !important;
+        }
+
+        > table {
+            width: 670px;
+        }
+    }
+}

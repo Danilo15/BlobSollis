@@ -1,0 +1,18 @@
+﻿<div class="sexo">
+    @{
+        string valor = Model;
+
+        if (valor == "F")
+        {
+        <text><input data-val-required="*campo requerido!" type="radio" value="M" />
+        Masculino</text>
+        <text><input data-val-required="*campo requerido!" type="radio" value="F" checked />Feminino</text>
+        }
+        else
+        {
+        <text><input data-val-required="*campo requerido!" type="radio" value="M" checked />
+        Masculino</text>
+        <text><input data-val-required="*campo requerido!" type="radio" value="F" />Feminino</text>
+        }
+    }
+</div>

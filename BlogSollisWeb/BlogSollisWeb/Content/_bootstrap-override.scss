@@ -1,0 +1,88 @@
+@import '_variaveis.scss';
+
+%global-active {
+    background-color: lighten($active-bgcolor, 10);
+    color: $base-color !important;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border-bottom: 0;
+}
+
+.btn-success {
+    background-color: #5cb85c !important;
+}
+
+.bootbox-confirm {
+    .modal-body {
+        width: 100%;
+        background: $error-color !important;
+        color: $base-color;
+        min-height: 50px !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        strong {
+            font-size: 18pt;
+        }
+    }
+}
+
+.help-page h1, .help-page .h1, .help-page h2, .help-page .h2, .help-page h3, .help-page .h3, #body.help-page, .help-page-table th, .help-page-table pre, .help-page-table p {
+    font-family: sans-serif;
+}
+
+.modal-open {
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+
+.modal-open .modal {
+  overflow: hidden;
+}
+
+.datepicker td, .datepicker th {
+    width: 35px;
+    height: 30px;
+}
+
+.datepicker-days {
+    table {
+        margin: 10px;
+    }
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: $active-bgcolor;
+    border-color: $active-bgcolor;
+}
+
+a {
+    color: $active-bgcolor;
+}
+
+a:hover, a:focus {
+    color: darken($active-bgcolor,8);
+}
+
+.nav:not(.nav-tabs) > li > a:hover, .nav:not(.nav-tabs) > li > a:focus {
+    background-color: lighten($hover-sub-color,24);
+}

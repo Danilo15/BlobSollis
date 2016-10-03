@@ -1,0 +1,5 @@
+﻿@model decimal
+@{
+    string valor = (Model == 0) ? "" : AK.Util.AKDecimal.DecimalFormatar(Model);
+}
+@Html.Display("", valor, ViewData["htmlAttributes"])

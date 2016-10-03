@@ -1,0 +1,84 @@
+.grid-multinivel {
+    .button-col {
+        width: 37px;
+        text-align: center;
+    }
+
+    .btn-mini {
+        width: 20px;
+        height: 20px;
+
+        .icon-plus {
+            margin-left: -4px;
+        }
+
+        .icon-minus {
+            margin-left: -3px;
+        }
+    }
+
+    .icone-mini {
+        font-size: 10pt !important;
+        font-family: verdane;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .icone-plus-mini:after {
+        content: '+';
+    }
+
+    .icone-minus-mini {
+        font-size: 15pt !important;
+    }
+
+    .icone-minus-mini:after {
+        content: '-';
+    }
+
+    .table {
+        .table, .table-bordered thead:first-child tr:first-child > th:first-child, .table-bordered thead:first-child tr:first-child > th:last-child {            
+            border-radius: 0;
+            border-right: 0;
+            border-bottom: 0;
+            border-top: 0;
+        }
+    }
+
+    .table-condensed th, .table-condensed td {
+        padding: 3px 2px;
+    }
+
+    .inner-table {
+        padding: 0 !important;
+        border: 0;
+
+        thead {
+            background-color: #E6E6E6;
+            color: #000;
+
+            tr:hover > th {
+                background-color: #E6E6E6;
+                color: #000;
+            }
+        }
+    }
+
+    .ate, .desc {
+        padding: 2px;
+        margin-bottom: 0;
+        width: 90%;
+        display: block;
+    }
+
+    .coluna-desc {
+        width: 80px;
+    }
+
+    .coluna-ate {
+        width: 80px;
+    }
+}

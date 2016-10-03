@@ -1,0 +1,32 @@
+.pagination {
+    margin: 0 0;
+}
+
+.pagination-control {
+    height: 30px;
+    margin: 0;
+
+    .page-loader {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    li:active {
+        @extend %global-press!optional;
+    }
+
+    .pagination-active {
+        @extend %global-active!optional;
+    }
+
+    .registros-count {
+        position: relative;
+
+        .registros-count-label {
+            display: inline-block;
+            top: -30px;
+            position: absolute;
+            left: 95%;
+        }
+    }
+}

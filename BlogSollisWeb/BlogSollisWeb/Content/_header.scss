@@ -1,0 +1,31 @@
+﻿@import '_variaveis.scss';
+
+.sair-ph, .sair-ph a {
+    color: $base-color !important;
+}
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $sidebar-borderright-color;
+}
+
+.navbar-fixed-top {
+    border: 0;
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+header {
+    .pagina-id {
+        color: $base-color !important;
+    }
+}
+
+#navbar {
+    .help-ph {
+        margin-left: 10px;
+        line-height: 50px;
+    }
+}

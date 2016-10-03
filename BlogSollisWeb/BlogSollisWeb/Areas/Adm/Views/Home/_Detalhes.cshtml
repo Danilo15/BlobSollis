@@ -1,0 +1,30 @@
+﻿@model HomeAdmDetalhesViewModel
+
+<link async rel="stylesheet" type="text/css" href="@Fingerprint.Tag("/Content/build/posts-detalhes.css")" />
+
+<div class="posts-detalhes detalhes-ph">
+    <form class="formulario" action="/Adm/Posts/Salvar?rascunho={0}">
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" class="idpost" name="PostSelecionado.IdPost" value="@Model.PostSelecionado.IdPost" />
+
+        <div class="form-group">
+            <label class="control-label">Título: </label>
+            <div class="controls">
+                <input type="text" class="form-control titulo required" maxlength="255" name="PostSelecionado.Titulo" value="@Model.PostSelecionado.Titulo" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Descrição: </label>
+            <div class="controls">
+                <textarea type="text" class="form-control descricao required" maxlength="2000" name="PostSelecionado.Descricao">@Model.PostSelecionado.Descricao</textarea>
+            </div>
+        </div>
+        <div class="botoes-ph">
+            <button class="btn btn-success btn-salvar">Salvar</button>
+            <button class="btn btn-primary btn-salvar-como-rascunho">Salvar como rascunho</button>
+        </div>
+    </form>
+</div>
+
+<script async src="@Fingerprint.Tag("/Scripts/build/posts.js")"></script>

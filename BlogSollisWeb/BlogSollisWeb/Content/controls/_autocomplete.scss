@@ -1,0 +1,54 @@
+﻿@import '../_variaveis.scss';
+
+.autocomplete-suggestions {
+    overflow-x:hidden;
+    overflow-y: auto;
+    display: block;
+    background-color: $base-color;
+}
+
+.autocomplete-suggestion {
+    text-indent: 5px;
+    padding: 5px;
+}
+
+.autocomplete-selected {
+    color: $base-color;
+    background-color: $active-bgcolor;
+}
+
+.autocomplete-no-suggestion {
+    text-indent: 5px;
+    padding: 5px;
+    background-color:$autocomplete-nosuggestion-bg;
+    color: $autocomplete-nosuggestion-color;
+}
+
+.autocomplete-ph {
+    display: block;
+    position: absolute;
+
+    .autocomplete-suggestions {
+        box-shadow: 0 6px 25px 1px rgba(50, 50, 50, 0.5);
+    }
+
+    .autocomplete-suggestion:not(:last-child) {
+        border-bottom: solid 1px #ccc;
+    }
+
+    label {
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        background-color: $base-sub-color;
+    }
+
+    label:hover {
+        color: $base-color;
+        background-color: $active-bgcolor;
+    }
+}
+
+.autoComplete {
+    width: 250px;
+}

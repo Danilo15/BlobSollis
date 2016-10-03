@@ -1,0 +1,5 @@
+﻿@model double
+@{
+    string valor = (Model == 0) ? string.Empty : Model.ToString();
+}
+@Html.TextBox("", valor, ViewData["htmlAttributes"])

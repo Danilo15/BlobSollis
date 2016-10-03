@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+    string errorMessage = "Error 404";
+    if(TempData["Error"] != null)
+    {
+        errorMessage = TempData["Error"].ToString();
+    }
+}
+
+@Html.Raw(errorMessage)

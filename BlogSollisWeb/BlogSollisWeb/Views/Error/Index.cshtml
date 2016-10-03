@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+    string errorMessage = Utilidades.AKResourceObter("MSG_ACESSO_NAO_AUTORIZADO");
+    if (TempData["Error"] != null)
+    {
+        errorMessage = TempData["Error"].ToString();
+    }
+}
+
+<div class="content">
+    @Html.Raw(errorMessage)
+    <a href="/Home">Voltar para Home</a>
+</div>

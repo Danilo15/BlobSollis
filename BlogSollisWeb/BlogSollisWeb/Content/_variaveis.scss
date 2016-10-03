@@ -1,0 +1,48 @@
+﻿$base-color: #fff;
+
+$sucesso-color: #35832c;
+
+$custom-input-color: #3C3B3B;
+
+$cor-cabecalho: #337ab7;
+$cor-cabecalho-secundaria: #89B8E0;
+
+$disabled-color: #8C8C8C;
+
+$active-hover-bgcolor: #2E6DA4;
+$active-bgcolor: #337AB7;
+$active-color: $base-color;
+
+$base-sub-color: $base-color;
+$hover-sub-color: #6299C9;
+
+$autocomplete-nosuggestion-bg: #fddb9d;
+$autocomplete-nosuggestion-color: #000;
+
+$error-color: #D31414;
+$error-color-bg: #FCDEDE;
+$error-option-color: $autocomplete-nosuggestion-color;
+
+$hover-color: $active-hover-bgcolor;
+$theader-bgcolor: $active-hover-bgcolor;
+$theader-color: $base-color;
+
+$table-disable-bgcolor: #F7F7F9;
+$table-disable-color: #c4c4c6;
+$table-bgcolor: $base-color;
+
+$focus-shortcut-color: orange;
+
+$wizard-active-bgcolor: $active-hover-bgcolor;
+$wizard-active-bordercolor: $active-bgcolor;
+$wizard-active-color: $base-color;
+$wizard-disabled-bgcolor: #f5f5f5;
+$wizard-disabled-color: #ccc;
+$wizard-nav-bordercolor: #d4d4d4;
+$wizard-divider-border-right-color: #e3e3e3;
+$wizard-divider-border-left-color: #f2f2f2;
+
+$sidebar-bgcolor: $wizard-disabled-bgcolor;
+$sidebar-borderright-color: #eee;
+
+//@import '_tema-cinza.scss';

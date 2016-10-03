@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Administrativo</title>
+    <meta charset='utf-8' />
+
+    <meta name="description" content=''>
+    <meta name='keywords' content=''>
+    <meta name='description' content=''>
+    <meta name='robots' content='noindex,nofollow'>
+    <meta name='copyright' content='Danilo Oliveira Gomes'>
+    <meta name='author' content='Danilo Oliveira Gomes'>
+    <meta name='reply-to' content='danilooliveira9@hotmail.com'>
+    <meta name='coverage' content='Worldwide'>
+    <meta name='distribution' content='Global'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="@Fingerprint.Tag("/Content/build/bundle.css")" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+</head>
+@{
+    ControllerContext c = this.ViewContext.Controller.ControllerContext;
+    var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
+    string controllerName = string.Empty;
+
+    //OBTEM O NOME DA CONTROLLER ATUAL E ADICIONA NA TAG BODY
+    if (routeValues.ContainsKey("controller"))
+    {
+        controllerName = (string)routeValues["controller"].ToString().ToLower();
+    }
+}
+<body class="@controllerName">
+    @Html.Partial("_MensagensPadroes")
+    <header>
+        @Html.Partial("_HeaderAdm")
+    </header>
+    <div class="content">
+        <section class="content-wrapper main-content clear-fix">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="main">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="@Fingerprint.Tag("/Scripts/build/bundle.js")"></script>
+    @Html.Partial("_Footer")
+    @Html.Partial("_Alert")
+    @Html.Partial("_Modal")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

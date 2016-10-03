@@ -1,0 +1,80 @@
+@import '_variaveis.scss';
+
+.sidebar {
+    display: none;
+
+    .nav-sidebar {
+        .nav {
+            li {
+                text-indent: 25px;
+                list-style: none;
+                height: 26px;
+                background-color:darken($base-color,5);
+                line-height: 5px;
+            }
+
+            .active {
+                a {
+                    color: $base-sub-color;
+                    background-color: $hover-sub-color;
+                }
+            }
+        }
+    }
+}
+
+.sidebar.focus-shortcut {
+    border: 1px solid $focus-shortcut-color;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: $sidebar-bgcolor;
+        border-right: 1px solid $sidebar-borderright-color;
+    }
+}
+
+.nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: $base-color;
+    background-color: $hover-color;
+}
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}

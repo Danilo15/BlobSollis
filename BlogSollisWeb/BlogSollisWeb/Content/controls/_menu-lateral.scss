@@ -1,0 +1,50 @@
+@import  '../_variaveis.scss';
+
+.menu-lateral.focus-shortcut {
+    border: 1px solid $focus-shortcut-color !important;
+    margin-left: -1px;
+}
+
+.menu-lateral {
+    position: relative;
+
+    .help-keys.up-down {
+        span {
+            margin-bottom: 2px;
+        }
+
+        top: 0;
+        left: 68px;
+    }
+
+    .help-keys.focus {
+        top: 47px;
+        left: 271px;
+    }
+
+    a.active, a.active:hover {
+        background-color: $active-hover-bgcolor;
+        color: $active-color;
+        text-shadow: 0 0 0 rgba(0,0,0,0.5);
+    }
+
+    .submenu {
+        li.active {
+            a {
+                background-color: $active-hover-bgcolor;
+            }
+        }
+    }
+
+    .nav-list {
+        .nav-list {
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 0;
+
+            a {
+                text-indent: 15px;
+            }
+        }
+    }
+}

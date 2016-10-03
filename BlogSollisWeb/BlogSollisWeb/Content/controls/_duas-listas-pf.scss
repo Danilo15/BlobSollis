@@ -1,0 +1,44 @@
+@import '../controls/duas-listas.scss';
+
+.duas-listas-pf {
+    .col-xs-6 {
+        width: 47% !important;
+    }
+
+    .col-xs-1 {
+        width: auto;
+    }
+
+    .busca-ph {
+        width: 50%;
+    }
+
+    .duas-lista-filho {
+        margin-top: 70px;
+
+        .grid-control tbody tr {
+            cursor: default !important;
+        }
+    }
+
+    .grid-pai {
+        margin-right: 5%;
+        width: 47% !important;
+    }
+
+    .busca-dl-filho {        
+
+        fieldset {
+            margin-left: 15px;
+        }
+
+        .criterio-busca {
+            margin-left: 25px;
+        }
+
+        fieldset, .complemento {            
+            position: relative;
+            top:40px;
+        }
+    }
+}

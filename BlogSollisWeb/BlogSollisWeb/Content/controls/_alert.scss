@@ -1,0 +1,43 @@
+﻿@import '../_variaveis.scss';
+
+.alert {
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1051;
+    border-radius: 0;
+
+    .title {
+        line-height: 20px !important;
+    }
+}
+
+.alert .close {
+    top: -4px;
+    font-size: 20pt !important;
+}
+
+.alert-danger {
+    .error-titulo {
+        font-size: 2rem;
+        display: inline-block!important;
+        width: 100%!important;
+    }
+}
+
+.alert-success {
+    padding: 6px;
+    padding-bottom: 0;
+
+    h4 {
+        float: left;
+        margin-right: 7px;
+        margin-top: 7px;
+    }
+
+    div {
+        margin-top: 8px;
+    }
+}

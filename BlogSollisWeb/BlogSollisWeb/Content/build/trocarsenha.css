@@ -1,0 +1,11 @@
+.trocarsenha-ph .control-label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  text-align: right; }
+.trocarsenha-ph .controls {
+  margin-left: 0;
+  display: inline-block; }
+.trocarsenha-ph .btn-salvar {
+  margin-left: 115px; }

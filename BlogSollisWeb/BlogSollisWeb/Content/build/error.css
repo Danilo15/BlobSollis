@@ -1,0 +1,21 @@
+.error-master h1, .error-master h2, .error-master h3, .error-master h4, .error-master h5, .error-master h6 {
+  margin-top: 10%;
+  display: block;
+  text-align: center; }
+.error-master .main-content > .container-fluid {
+  padding-top: 10%; }
+.error-master .content {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .error-master .content span {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px; }
+  .error-master .content strong {
+    font-weight: bolder; }
+.error-master .error-titulo {
+  font-size: 2rem;
+  display: inline-block;
+  width: 100%; }

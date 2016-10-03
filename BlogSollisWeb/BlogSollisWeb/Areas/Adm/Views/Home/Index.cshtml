@@ -1,0 +1,20 @@
+﻿@model HomeAdmViewModel
+
+@section styles{
+    <link rel="stylesheet" type="text/css" href="@Fingerprint.Tag("/Content/build/home-adm.css")"/>
+}
+
+<div class="home-adm">
+    <h2>Posts</h2>
+    <p>Nesta tela você pode criar, editar e excluir posts.</p>
+    <div class="botoes pull-right">
+        <button class="btn btn-primary btn-adicionar-novo" data-url="/Adm/Home/Criar">Novo</button>
+    </div>
+    <div class="grid-ph ">
+        @Html.Partial("~/Areas/Adm/Views/Home/_Grid.cshtml", Model)
+    </div>
+</div>
+
+@section scripts{
+    <script async data-main="@Fingerprint.Tag("/Scripts/build/home-adm.js")" src="@Fingerprint.Tag("/Scripts/vendors/require.js")"></script>
+}

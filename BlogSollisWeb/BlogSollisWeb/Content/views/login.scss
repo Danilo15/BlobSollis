@@ -1,0 +1,20 @@
+﻿.login {
+    fieldset {
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 160px;
+    }
+
+    label.error {
+        display: none !important;
+    }
+
+    .password, .btn-entrar {
+        margin-top: 2rem;
+    }
+
+    ul.navbar-nav, p.navbar-text {
+        display: none !important;
+    }
+}

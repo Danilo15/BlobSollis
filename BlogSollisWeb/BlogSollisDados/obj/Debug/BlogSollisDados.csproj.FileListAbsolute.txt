@@ -1,0 +1,5 @@
+C:\ProjetosLocal\BlogSollisWeb\BlogSollisDados\bin\Debug\BlogSollisDados.dll
+C:\ProjetosLocal\BlogSollisWeb\BlogSollisDados\bin\Debug\BlogSollisDados.pdb
+C:\ProjetosLocal\BlogSollisWeb\BlogSollisDados\obj\Debug\BlogSollisDados.csprojResolveAssemblyReference.cache
+C:\ProjetosLocal\BlogSollisWeb\BlogSollisDados\obj\Debug\BlogSollisDados.dll
+C:\ProjetosLocal\BlogSollisWeb\BlogSollisDados\obj\Debug\BlogSollisDados.pdb

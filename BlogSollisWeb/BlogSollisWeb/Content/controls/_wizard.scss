@@ -1,0 +1,86 @@
+@import '../_variaveis.scss';
+
+.wizard-menu {
+    float: left;
+
+    .disabled {
+        div, span, label, p, input, button, select {
+            background-color: $base-color !important;
+            color: $wizard-disabled-color !important;
+            cursor: not-allowed !important;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        border: 1px solid $wizard-nav-bordercolor;
+        min-height: 40px;
+        background-color: $base-color;
+    }
+
+    .nav {
+        margin: 0;
+
+        li {
+            float: left;
+
+            a {
+                cursor: default;
+            }
+        }
+
+        .btn-primary {
+            a {
+                color: $wizard-active-color !important;
+                text-shadow: none !important;
+            }
+
+            a:hover {
+                color: $wizard-active-color;
+                background-color: $wizard-active-bgcolor;
+                border-color: $wizard-active-bordercolor;
+            }
+        }
+
+        .divider-vertical {
+            margin: 0;
+            border-right: 1px solid $wizard-divider-border-right-color !important;
+        }
+
+        .divider-vertical:first-child {
+            border-left: 1px solid $wizard-divider-border-right-color !important;
+        }
+    }
+
+    .navbar-inner {
+        padding-right: 0;
+        padding-left: 0;
+
+        .previous, .next {
+            display: inline-block;
+            float: left;
+            text-align: left;
+            padding: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .previous {
+            margin-right: 0;
+        }
+
+        .next {
+            margin-left: 0;
+        }
+
+        ul {
+            float: left;
+        }
+
+        a.disabled {
+            background-color: $base-color !important;
+            color: $wizard-disabled-color !important;
+            cursor: not-allowed !important;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import '../_variaveis.scss';
+
+%grid-control-icon-cell {
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: lighten($active-bgcolor, 45);
+}
+
+.table {
+    margin-bottom: 0;
+    background: $table-bgcolor;
+
+    caption {
+        text-align: left;
+    }
+}
+
+.grid-control {
+    .grid-control-icon-cell {
+        @extend %grid-control-icon-cell;
+    }
+
+    .event-click {
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    td.disabled {
+        cursor: not-allowed !important;
+    }
+
+    .help-keys.excel {
+        top: -24px;
+    }
+
+    .help-keys.novo {
+        top: -22px;
+        left: 124px;
+    }
+
+    .help-keys.focus {
+        top: 6px;
+        left: 36px;
+    }
+
+    .help-keys.up-down {
+        span {
+            margin-bottom: 2px;
+        }
+
+        top: 51px;
+        left: -74px;
+    }
+
+    thead {
+        background-color: $theader-bgcolor;
+        color: $theader-color;
+    }
+
+    .totalregistros {
+        float: right;
+        margin-top: 0;
+        margin-bottom: 2px;
+        right: 5px;
+        position: relative;
+        font-size: 10px;
+
+        .badge {
+            margin-right: 0;
+            position: relative;
+            top: 2px;
+            font-size: 8pt !important;
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+
+    .grid-control-loader-line {
+        text-align: center;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    .disabled {
+        cursor: not-allowed;
+        color: $table-disable-color;
+
+        * {
+            cursor: not-allowed;
+            background: $table-disable-bgcolor;
+            color: $table-disable-color;
+        }
+    }
+
+    .disabled :hover {
+        cursor: not-allowed;
+        background: $table-disable-bgcolor;
+        color: $table-disable-color;
+    }
+
+    .disabled:active {
+        cursor: not-allowed;
+        background: $table-disable-bgcolor;
+        color: $table-disable-color;
+    }
+
+    .select, .remove {
+        @extend %grid-control-icon-cell;
+        display: block;
+        cursor: pointer;
+    }
+
+    .remove {
+        width: 100% !important;
+        cursor: pointer !important;
+    }
+
+    .selected-row {
+        td, a {
+            @extend %global-active!optional;
+        }
+
+        .select, .remove {
+            @extend %grid-control-icon-cell;
+        }
+
+        td {
+            .disabled {
+                background-color:transparent;
+            }
+        }
+    }
+
+    .grid-selecionar {
+        cursor: pointer;
+    }
+}
+
+.grid-control.focus-shortcut {
+    table {
+        border: 1px solid $focus-shortcut-color !important;
+        margin-left: -1px;
+    }
+}

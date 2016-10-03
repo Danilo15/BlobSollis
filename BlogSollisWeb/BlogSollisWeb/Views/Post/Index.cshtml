@@ -1,0 +1,17 @@
+﻿@model HomeAdmDetalhesViewModel
+
+@section styles{
+    <link rel="stylesheet" type="text/css" href="@Fingerprint.Tag("/Content/build/posts.css")" />
+}
+
+<div class="posts">
+    <div class="post-ph">
+        <p class="breadcrumb"><a href="/">Home</a> / <a href="#">@Model.PostSelecionado.Titulo</a></p>
+        <h1>@Model.PostSelecionado.Titulo</h1>
+        <div>
+            <p>
+                @Model.PostSelecionado.Descricao
+            </p>
+        </div>
+    </div>
+</div>

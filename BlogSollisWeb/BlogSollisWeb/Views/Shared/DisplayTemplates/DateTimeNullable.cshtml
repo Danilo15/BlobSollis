@@ -1,0 +1,5 @@
+﻿@model DateTime?
+@{
+    string data = Utils.NullableDateString(Model);
+}
+@Html.Display("", data)

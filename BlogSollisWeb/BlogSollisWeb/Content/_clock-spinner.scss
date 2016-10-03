@@ -1,0 +1,140 @@
+﻿$clock-dark-color:#000;
+$clock-light-color:#fff;
+$clock-size:25px;
+
+.clock {
+    height: $clock-size;
+    width: $clock-size;
+    background-color: $clock-light-color;
+    box-shadow: inset 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: 2px solid $clock-dark-color;
+    border-radius: $clock-size/2;
+    position: relative;
+    left: -5px;
+    top: -2px;
+    opacity: .3;
+}
+
+.clock::before {
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: $clock-dark-color;
+    border-radius: 4px;
+    content: "";
+    margin: -2px 0 0 -2px;
+    z-index: 1;
+}
+
+.hand {
+    -moz-animation-name: hand;
+    -o-animation-name: hand;
+    -webkit-animation-name: hand;
+    animation-name: hand;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    width: 2px;
+    background-color: $clock-dark-color;
+    border-radius: 1px;
+    margin-left: -1px;
+}
+
+.hand.minute {
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    height: 10px;
+}
+
+.hand.hour {
+    -moz-animation-duration: 12s;
+    -o-animation-duration: 12s;
+    -webkit-animation-duration: 12s;
+    animation-duration: 12s;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    height: 9px;
+}
+
+@-moz-keyframes hand {
+    from {
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes hand {
+    from {
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hand {
+    from {
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

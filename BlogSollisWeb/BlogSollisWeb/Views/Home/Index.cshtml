@@ -1,0 +1,35 @@
+﻿@model HomeViewModel
+@using BlogSollisNegocio
+
+@section styles {
+    <link href="@Fingerprint.Tag("/Content/build/home.css")" rel="stylesheet" />
+}
+
+<div class="post-ph">
+    @if (Model.PostsCol.Count == 0)
+    {
+        <h1 class="nao-ha-posts">Não há posts.</h1>
+    }
+    @foreach (Post item in Model.PostsCol)
+    {
+        <div class="post">
+            <h2>@item.Titulo</h2>
+            <div class="texto-ph">
+                @{
+                    bool textoGrande = item.Descricao.Length > 400;
+                }
+                <p>
+                    @Utilidades.limitar(item.Descricao, 400) @(textoGrande ? "..." : string.Empty)
+                </p>
+                @if (textoGrande)
+                {
+                    <a href="/Post/Index/@item.IdPost">Leia mais...</a>
+                }
+            </div>
+        </div>
+                    }
+</div>
+
+@section scripts {
+    <script data-main="@Fingerprint.Tag("/Scripts/build/home.js")" src="~/Scripts/build/require.js"></script>
+}

@@ -1,0 +1,5 @@
+﻿@model int
+@{
+    string valor = Model == 0 ? "" : Model.ToString();
+}
+@Html.Display("", valor, ViewData["htmlAttributes"])

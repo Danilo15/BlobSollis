@@ -1,0 +1,31 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = string.Format("Login");
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    string errorMessage = string.Empty;
+
+    if(TempData["Error"]!=null)
+    {
+        errorMessage = TempData["Error"].ToString();
+    }
+}
+
+<div class="">
+    <fieldset>
+        <legend>Administrativo</legend>
+        <form class="form-signin" action="/Login/Logar" method="post" novalidate="novalidate">
+            <input type="hidden" name="hashurl" value="" class="hashurl" />
+            <span class="error">@errorMessage</span>
+            <input type="hidden" class="form-control required" name="culture" required="required" value="pt-BR">            
+
+            <input type="text" class="form-control required" name="email" placeholder="E-mail" required="required" value="">
+            <input type="password" class="form-control required password" autocomplete="on" name="senha" placeholder="Senha" required="required" value="">
+            <button class="btn btn-default btn-primary btn-entrar" type="submit">Entrar</button>
+        </form>
+    </fieldset>
+</div>
+
+@section scripts {
+    <script data-main="@Fingerprint.Tag("/Scripts/build/login.js")" src="~/Scripts/build/require.js"></script>
+}

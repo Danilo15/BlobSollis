@@ -1,0 +1,27 @@
+﻿.posts-detalhes {
+    .control-label {
+        width: 85px;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    .controls {
+        margin-left: 0;
+        display: inline-block;
+        width: 85%;
+    }
+
+    label.error {
+        font-size: 11px;
+        position: absolute;
+    }
+
+    .botoes-ph {
+        margin-left: 88px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 160px;
+    }
+}

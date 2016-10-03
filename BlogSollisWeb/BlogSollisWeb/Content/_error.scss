@@ -1,0 +1,63 @@
+﻿@import '_variaveis.scss';
+
+.error {
+    color: $error-color;
+}
+
+.field-validation-error {
+    color: $error-color;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid $error-color;
+    background-color: $error-color-bg;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: $error-color;
+}
+
+select[multiple='multiple'].required.error {
+    border-color: $error-color;
+    background-color: $error-color-bg;
+
+    option {
+        color: $error-option-color;
+        background-color: $error-color-bg;
+    }
+}
+
+
+
+input.error:focus, .form-control .error {
+    outline: $error-color auto 0 !important;
+    box-shadow: 0 0 0 0 $error-color !important;
+    border: $error-color solid 1px !important;
+}
+
+input.error, textarea.error {
+    background: $error-color-bg;
+    border: 1px solid $error-color;
+    color: $error-option-color;
+}
+
+label.error {
+    margin-left: 5px;
+      display: block;
+}
+
+select.required.error {
+    border-color: $error-color;
+    background-color:$error-color-bg;
+
+    option {
+        color: $error-option-color;
+        background-color: #fff;
+    }
+}
+

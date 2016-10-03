@@ -1,0 +1,13 @@
+.home-adm .botoes {
+  margin-bottom: 10px; }
+.home-adm .coluna-pencil {
+  width: 40px;
+  text-align: center; }
+.home-adm .coluna-remover {
+  width: 35px;
+  text-align: center; }
+.home-adm .coluna-rascunho {
+  width: 5%;
+  text-align: center; }
+.home-adm .glyphicon-pencil {
+  cursor: pointer; }

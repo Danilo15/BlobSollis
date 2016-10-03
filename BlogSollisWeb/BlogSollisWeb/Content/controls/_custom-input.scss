@@ -1,0 +1,60 @@
+﻿@import "../_variaveis.scss";
+
+
+.label-check span {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+input[type=radio], input[type=checkbox] {
+    position: absolute;
+    z-index: -1000;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.label-check span::before, .label-check span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.label-check span::before {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid lighten($custom-input-color,50);
+}
+
+input:checked + span::after {
+    display: block;
+}
+
+input[type="radio"] + span::before,
+input[type="radio"] + span::after {
+    border-radius: 50%;
+}
+
+input[type="checkbox"] + span::before {
+    border-radius: 2px !important;
+}
+
+input[type="checkbox"] + span::after {
+}
+
+/*Marcador*/
+.label-check span::after {
+    display: none;
+    width: 7px;
+    height: 7px;
+    margin: 4px;
+    background-color: $custom-input-color;
+}

@@ -1,0 +1,34 @@
+﻿.error-master {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 10%;
+        display: block;
+        text-align: center;
+    }
+
+    .main-content > .container-fluid {
+        padding-top: 10%;
+    }
+
+    .content {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight:bolder;
+        }
+    }
+
+    .error-titulo {
+        font-size: 2rem;
+        display: inline-block;
+        width: 100%;
+    }
+}

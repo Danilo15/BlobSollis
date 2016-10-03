@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77020563-EC40-478C-94EF-B4FAB21D12FF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlogSollisWeb</RootNamespace>
+    <AssemblyName>BlogSollisWeb</AssemblyName>
+    <ExcludeFilesFromDeployment>Icon.png;packages.config;package.json;gulpfile.js;r.js;</ExcludeFilesFromDeployment>
+    <ExcludeFoldersFromDeployment>GulpTasks;Content;Scripts;node_modules</ExcludeFoldersFromDeployment>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+    CSSCustomCollectFiles;
+    $(CopyAllFilesToSingleFolderForPackageDependsOn);
+  </CopyAllFilesToSingleFolderForPackageDependsOn>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+    JSCustomCollectFiles;
+    $(CopyAllFilesToSingleFolderForPackageDependsOn);
+  </CopyAllFilesToSingleFolderForPackageDependsOn>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Adm\AdmAreaRegistration.cs" />
+    <Compile Include="Areas\Adm\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Adm\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Adm\Controllers\PostsController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DownloadFileActionResult.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Filters\AjaxCustomAuthAttributeLogin.cs" />
+    <Compile Include="Filters\CustomAuthAttributeLogin.cs" />
+    <Compile Include="Filters\DecimalModelBinder.cs" />
+    <Compile Include="Res.Designer.cs" />
+    <Compile Include="Utilidades\CookieUtil.cs" />
+    <Compile Include="Utilidades\Utilidades.cs" />
+    <Compile Include="Utilidades\WebConfigSettings.cs" />
+    <Compile Include="Utilidades\Fingerprint.cs" />
+    <Compile Include="Utilidades\RenderRazorViewToString.cs" />
+    <Compile Include="Utilidades\RetornoConsulta.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\EmptyStringModelBinder.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\fileinput.css" />
+    <Content Include="Content\bootstrap\fileinput.min.css" />
+    <Content Include="Content\controls\consulta-cnpj.css" />
+    <Content Include="Content\controls\consulta-cnpj.min.css" />
+    <Content Include="Content\controls\datepicker.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\skin-vista\icons.gif" />
+    <Content Include="Content\skin-vista\loading.gif" />
+    <Content Include="Content\skin-vista\tree-loading.gif" />
+    <Content Include="Content\skin-vista\ui.dynatree.css" />
+    <Content Include="Content\skin\blue.monday\jplayer.blue.monday.css" />
+    <Content Include="Content\skin\blue.monday\jplayer.blue.monday.jpg" />
+    <Content Include="Content\skin\blue.monday\jplayer.blue.monday.seeking.gif" />
+    <Content Include="Content\skin\blue.monday\jplayer.blue.monday.video.play.png" />
+    <Content Include="Content\skin\circle.skin\bgr.jpg" />
+    <Content Include="Content\skin\circle.skin\buffer.png" />
+    <Content Include="Content\skin\circle.skin\circle.player.css" />
+    <Content Include="Content\skin\circle.skin\controls.jpg" />
+    <Content Include="Content\skin\circle.skin\progress.png" />
+    <Content Include="Content\skin\circle.skin\progress_sprite.jpg" />
+    <Content Include="Content\skin\pink.flag\jplayer.pink.flag.css" />
+    <Content Include="Content\skin\pink.flag\jplayer.pink.flag.jpg" />
+    <Content Include="Content\skin\pink.flag\jplayer.pink.flag.seeking.gif" />
+    <Content Include="Content\skin\pink.flag\jplayer.pink.flag.video.play.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gulpfile.js" />
+    <Content Include="GulpTasks\concat.js" />
+    <Content Include="GulpTasks\copy.js" />
+    <Content Include="GulpTasks\cssmin.js" />
+    <Content Include="GulpTasks\jshint.js" />
+    <Content Include="GulpTasks\requirejs.js" />
+    <Content Include="GulpTasks\sass.js" />
+    <Content Include="GulpTasks\scsslint.js" />
+    <Content Include="GulpTasks\uglify.js" />
+    <Content Include="GulpTasks\utf8convert.js" />
+    <Content Include="GulpTasks\watch.js" />
+    <Content Include="Images\glyphicons-halflings-white.png" />
+    <Content Include="Images\glyphicons-halflings.png" />
+    <Content Include="Images\icons.gif" />
+    <Content Include="Images\loading-sm.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\select2.png" />
+    <Content Include="Images\tree-loading.gif" />
+    <Content Include="Scripts\app\controls\autoCompleteBBControl.js" />
+    <Content Include="Scripts\app\controls\datePickerBBControl.js" />
+    <Content Include="Scripts\app\controls\editorTextoBBControl.js" />
+    <Content Include="Scripts\app\controls\fileUploadControl.js" />
+    <Content Include="Scripts\app\controls\gridControl.js" />
+    <Content Include="Scripts\app\controls\gridEditavelControl.js" />
+    <Content Include="Scripts\app\controls\maskBBControl.js" />
+    <Content Include="Scripts\app\controls\paginationControl.js" />
+    <Content Include="Scripts\app\controls\tabControl.js" />
+    <Content Include="Scripts\app\help-main.js" />
+    <Content Include="Scripts\app\routers\pedidoRouter.js" />
+    <Content Include="Scripts\app\routers\tabRouter.js" />
+    <Content Include="Scripts\app\views\posts.js" />
+    <Content Include="Scripts\app\views\posts-main.js" />
+    <Content Include="Scripts\app\views\home-adm-main.js" />
+    <Content Include="Scripts\app\views\home-adm.js" />
+    <Content Include="Scripts\app\views\login-main.js" />
+    <Content Include="Scripts\app\views\login.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Adm\Views\Home\_Grid.cshtml" />
+    <Content Include="Areas\Adm\Views\Home\_Detalhes.cshtml" />
+    <Content Include="Content\views\home-adm.scss" />
+    <Content Include="Content\views\posts-detalhes.scss" />
+    <Content Include="Content\views\posts.scss" />
+    <Content Include="Areas\Adm\Views\Shared\_Layout.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\plugins\additional-methods.min.js" />
+    <Content Include="Scripts\plugins\bootbox.js" />
+    <Content Include="Scripts\plugins\bootstrap.js" />
+    <Content Include="Scripts\plugins\bootstrap\bootstrap-button.js" />
+    <Content Include="Scripts\plugins\bootstrap\bootstrap-dropdown.js" />
+    <Content Include="Scripts\plugins\bootstrap\bootstrap-fileupload.js" />
+    <Content Include="Scripts\plugins\bootstrap\bootstrap-popover.js" />
+    <Content Include="Scripts\plugins\bootstrap\bootstrap-tooltip.js" />
+    <Content Include="Areas\Adm\Views\web.config" />
+    <Content Include="Areas\Adm\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Adm\Views\Home\Index.cshtml" />
+    <None Include="Content\controls\datepicker.scss" />
+    <Content Include="favicon.ico" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\views\home.scss" />
+    <Content Include="Content\app.scss" />
+    <Content Include="Content\_global.scss" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\spinner.gif" />
+    <Content Include="Images\x.png" />
+    <Content Include="package.json" />
+    <Content Include="r.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\app\controls\cepControl.js" />
+    <Content Include="Scripts\app\controls\consultaCNPJBBControl.js" />
+    <Content Include="Scripts\app\controls\telefoneControl.js" />
+    <Content Include="Scripts\app\controls\treeViewBBControl.js" />
+    <Content Include="Scripts\app\controls\wizardMenuControl.js" />
+    <Content Include="Scripts\app\master.js" />
+    <Content Include="Scripts\app\utilidades.js" />
+    <Content Include="Scripts\app\views\home-main.js" />
+    <Content Include="Scripts\app\views\home.js" />
+    <Content Include="Scripts\app\help\abrirModalSimples.js" />
+    <Content Include="Scripts\app\help\autoCompleteDemo.js" />
+    <Content Include="Scripts\app\help\checkboxListDemo.js" />
+    <Content Include="Scripts\app\help\confirmPrompt.js" />
+    <Content Include="Scripts\app\help\consultaCepDemo.js" />
+    <Content Include="Scripts\app\help\exibirMensagens.js" />
+    <Content Include="Scripts\app\help\fileUploadDemo.js" />
+    <Content Include="Scripts\app\help\fileUploadManualDemo.js" />
+    <Content Include="Scripts\app\help\formDemo.js" />
+    <Content Include="Scripts\app\help\gridDemo.js" />
+    <Content Include="Scripts\app\help\gridMultiplosDemo.js" />
+    <Content Include="Scripts\app\help\radioButtonDemo.js" />
+    <Content Include="Scripts\app\help\tabDemo.js" />
+    <Content Include="Scripts\app\help\treeViewDemo.js" />
+    <Content Include="Scripts\app\help\treeViewHtmlDemo.js" />
+    <Content Include="Scripts\app\help\triggerEvents.js" />
+    <Content Include="Scripts\app\help\wizardMenuDemo.js" />
+    <Content Include="Scripts\plugins\additional-methods.js" />
+    <Content Include="Scripts\plugins\bootstrap-datepicker.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_cz.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_de.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_es.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_fr.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_hu.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_it.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_LANG.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_nl.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_pl.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_pt.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_pt_BR.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_ru.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_sk.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_sr.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_th.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_tr.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_uk.js" />
+    <Content Include="Scripts\plugins\fileupload\fileinput_locale_zh.js" />
+    <Content Include="Scripts\plugins\inputmask.date.extensions.js" />
+    <Content Include="Scripts\plugins\inputmask.js" />
+    <Content Include="Scripts\plugins\inputmask.numeric.extensions.js" />
+    <Content Include="Scripts\plugins\inputmask.phone.extensions.js" />
+    <Content Include="Scripts\plugins\inputmask.regex.extensions.js" />
+    <Content Include="Scripts\plugins\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\plugins\jquery.are-you-sure.js" />
+    <Content Include="Scripts\plugins\jquery.cep-1.0.js" />
+    <Content Include="Scripts\plugins\jquery.dynatree.js" />
+    <Content Include="Scripts\plugins\jquery.fileupload.js" />
+    <Content Include="Scripts\plugins\jquery.iframe-transport.js" />
+    <Content Include="Scripts\plugins\jquery.inputmask.js" />
+    <Content Include="Scripts\plugins\jquery.syntaxhighlighter.min.js" />
+    <Content Include="Scripts\plugins\jquery.ui.widget.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\plugins\picturefill.js" />
+    <Content Include="Scripts\plugins\validationHelper.en-US.js" />
+    <Content Include="Scripts\plugins\validationHelper.es-AR.js" />
+    <Content Include="Scripts\plugins\validationHelper.js" />
+    <Content Include="Scripts\plugins\validationHelper.pt-BR.js" />
+    <Content Include="Scripts\vendors\bootbox.js" />
+    <Content Include="Scripts\vendors\bootstrap.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\plugins\ak-plugin.js" />
+    <Content Include="Content\help.scss" />
+    <Content Include="Content\controls\consulta-cnpj.scss" />
+    <Content Include="Content\controls\_check-box.scss" />
+    <Content Include="Content\controls\_duas-listas-pf.scss" />
+    <Content Include="Content\controls\_duas-listas.scss" />
+    <Content Include="Content\controls\_grid-multinivel.scss" />
+    <Content Include="Content\controls\_grid.scss" />
+    <Content Include="Content\controls\_menu-lateral.scss" />
+    <Content Include="Content\controls\_paginacao.scss" />
+    <Content Include="Content\controls\_radio-button.scss" />
+    <Content Include="Content\controls\_telefone-control.scss" />
+    <Content Include="Content\controls\_wizard.scss" />
+    <Content Include="Content\skin-vista\Thumbs.db" />
+    <Content Include="Content\_bootstrap-override.scss" />
+    <Content Include="Content\controls\_alert.scss" />
+    <Content Include="Content\controls\_autocomplete.scss" />
+    <Content Include="Content\controls\_custom-input.scss" />
+    <Content Include="Content\_clock-spinner.scss" />
+    <Content Include="Content\_error.scss" />
+    <Content Include="Content\_spinner.scss" />
+    <Content Include="Content\_variaveis.scss" />
+    <Content Include="Content\bootstrap\_bootstrap-fileupload.scss" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\_footer.scss" />
+    <Content Include="Content\_header.scss" />
+    <Content Include="Content\_sidebar.scss" />
+    <Content Include="Content\_tema-cinza.scss" />
+    <Content Include="Content\views\error.scss" />
+    <Content Include="Content\views\login.scss" />
+    <Content Include="Content\views\esqueciminhasenha.scss" />
+    <Content Include="Content\views\trocarsenha.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\Homolog.pubxml" />
+    <None Include="Properties\PublishProfiles\Producao.pubxml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\plugins\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\plugins\jquery.validate.js" />
+    <Content Include="Scripts\plugins\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\vendors\browserDetection.js" />
+    <Content Include="Scripts\vendors\domReady.js" />
+    <Content Include="Scripts\vendors\jquery-2.2.1.js" />
+    <Content Include="Scripts\vendors\jquery.autocomplete.js" />
+    <Content Include="Scripts\vendors\mousetrap.min.js" />
+    <Content Include="Scripts\vendors\require.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Alert.cshtml" />
+    <Content Include="Views\Shared\_Modal.cshtml" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ar.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.bg.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ca.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.cs.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.da.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.de.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.el.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.es.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.et.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fi.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.fr.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.he.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hr.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.hu.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.id.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.is.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.it.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ja.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ka.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.kr.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lt.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.lv.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.mk.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ms.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nb.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.nl.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.no.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pl.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt-BR.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.pt.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ro.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs-latin.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.rs.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.ru.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sk.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sl.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sq.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sv.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.sw.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.th.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.tr.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.uk.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-CN.min.js.map" />
+    <Content Include="Scripts\plugins\locales\bootstrap-datepicker.zh-TW.min.js.map" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_LayoutError.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BooleanNullable.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeNullable.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DecimalEmpty.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\IntEmpty.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Sexo.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\BooleanNullable.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DecimalEmpty.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DoubleEmpty.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\IntEmpty.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Sexo.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Areas\Adm\Views\Login\Index.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\_MensagensPadroes.cshtml" />
+    <Content Include="Views\Post\Index.cshtml" />
+    <Content Include="Views\Shared\_HeaderAdm.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Adm\Models\" />
+    <Folder Include="Areas\Adm\Views\Posts\" />
+    <Folder Include="HtmlHelpers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlogSollisNegocio\BlogSollisNegocio.csproj">
+      <Project>{dc1097f3-9718-46a7-a7c0-75c4501bca98}</Project>
+      <Name>BlogSollisNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <Target Name="CSSCustomCollectFiles">
+    <ItemGroup>
+      <_CustomFilesCSS Include=".\Content\build\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFilesCSS.Identity)">
+        <DestinationRelativePath>Content\build\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="JSCustomCollectFiles">
+    <ItemGroup>
+      <_CustomFilesJS Include=".\scripts\build\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFilesJS.Identity)">
+        <DestinationRelativePath>scripts\build\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62053</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62053/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

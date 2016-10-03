@@ -1,0 +1,56 @@
+body {
+  padding-top: 0; }
+
+ol.linenums {
+  padding-left: 14px !important; }
+
+.prettyprint {
+  width: 98% !important; }
+
+.form-horizontal .form-group {
+  margin-right: 0;
+  margin-left: 0; }
+
+.demo {
+  padding-left: 20px;
+  padding-top: 0; }
+
+form .row {
+  margin-left: 0; }
+
+.demo .div {
+  margin-bottom: 20px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  width: 98.5%; }
+
+.demo .sintax {
+  display: none; }
+
+.demo .botao-codigo {
+  position: absolute;
+  margin-left: 446px;
+  margin-top: -44px !important; }
+
+.demo input[type='button'] {
+  margin-top: 10px; }
+
+pre {
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+.tree-view {
+  margin-top: 20px; }
+
+.autoComplete {
+  width: 400px; }
+
+.file-upload-manual-demo input[type='button'] {
+  margin-top: 0; }
+
+.wizard-menu {
+  width: 376px; }
+
+div h2 {
+  line-height: 50px; }

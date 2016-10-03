@@ -1,0 +1,42 @@
+.checkbox-list-vertical {
+    label {
+        display: table;
+        margin-bottom: 4px;
+        cursor: pointer;
+
+        input {
+            cursor: pointer;
+            float: left;
+            margin-top: 4px;
+        }
+
+        span {
+            margin-left: 5px;
+            cursor: pointer;
+            float: left;
+        }
+    }
+}
+
+.checkbox-list-horizontal {
+    height: 30px;
+    display: table;
+    cursor: pointer;
+
+    label {
+        margin-bottom: 4px;
+        cursor: pointer;
+        float: left;
+
+        input {
+            cursor: pointer;
+            margin-top: -2px;
+        }
+
+        span {
+            margin-left: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}

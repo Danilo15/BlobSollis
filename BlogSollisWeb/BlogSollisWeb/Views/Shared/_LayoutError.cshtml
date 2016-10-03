@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+
+    <meta charset='utf-8' />
+
+    <meta name="description" content=''>
+    <meta name='keywords' content=''>
+    <meta name='description' content=''>
+    <meta name='robots' content='noindex,nofollow'>
+    <meta name='copyright' content='AKTTOM Sistemas'>
+    <meta name='author' content='AKTTOM Sistemas, atendimento@aksistemas.com.br'>
+    <meta name='reply-to' content='atendimento@aksistemas.com.br'>
+    <meta name='coverage' content='Worldwide'>
+    <meta name='distribution' content='Global'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="@Fingerprint.Tag("/Content/build/bundle.css")" rel="stylesheet" />
+    <link href="@Fingerprint.Tag("/Content/build/error.css")" rel="stylesheet" />
+    @RenderSection("styles", required :false)
+</head>
+@{
+    ControllerContext c = this.ViewContext.Controller.ControllerContext;
+    var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
+    string controllerName = string.Empty;
+
+    //OBTEM O NOME DA CONTROLLER ATUAL E ADICIONA NA TAG BODY
+    if(routeValues.ContainsKey("controller"))
+    {
+        controllerName = "error-master";
+    }
+}
+<body class="@controllerName" data-help="@WebConfigSettings.HelpUrlPath">
+    <header>
+        @Html.Partial("_Header")
+    </header>
+    <div class="content">
+        <section class="content-wrapper main-content clear-fix">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </section>
+    </div>
+    <script src="@Fingerprint.Tag("/Scripts/build/bundle.js")"></script>
+    @Html.Partial("_Comum")
+    @Html.Partial("_Footer")
+    @Html.Partial("_Alert")
+    @Html.Partial("_Modal")    
+    @RenderSection("scripts", required :false)
+</body>
+</html>
